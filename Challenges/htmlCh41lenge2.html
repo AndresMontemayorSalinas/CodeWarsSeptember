@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Code Wars August</title>
+    <title>Code Wars September</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
 
@@ -23,29 +23,56 @@
         -moz-user-select: none;
         user-select: none;
       }
-      button {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        background: red;
-        color: black;
-        border: 1px solid black;
-        border-radius: 0.5em;
-        font-size: 1.5em;
-        padding: 0 0.75em;
-        }
 
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
       }
+      .containerCounter {
+        background-color: #88B169; 
+        width:500px;
+        height:250px;
+        border: 10px solid #926981;
+        margin: 50px auto
+      }
+      h1{
+        text-align: center;
+        color: white;
+      }
+      #number {
+        height: 25px;
+        width: 250px;
+        margin: 50px auto;
+        border: 1px solid black;
+        text-align: center;
+        background-color: white;
+      }
+      #increment {
+        height:25px;
+        width: 100px;
+        margin-top: 15px;
+        margin-left: 125px;
+      }
+      #decrement {
+        height:25px;
+        width: 100px;
+        margin-top: 15px;
+        margin-left: 50px;
+      }
+      #submit {
+        height:25px;
+        width: 100px;
+        /* margin-top: 15px; */
+        margin-left: 50px;
+        background-color: turquoise;
+      }
 
-      
+       
+
     </style>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    
   </head>
   <body>
     
@@ -53,36 +80,39 @@
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container">
       <a href="../index.html" class="navbar-brand d-flex align-items-center">
-        <svg xmlns="https://andresmontemayorsalinas.github.io/CodeWarsAugust/" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        <svg xmlns="https://andresmontemayorsalinas.github.io/CodeWarsSeptember/" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
         <strong>Atos</strong>
       </a>
     </div>
   </div>
 </header>
 
-<main style="background-color: #5AB9EA ">
+<main  style="background-color: #5AB9EA ">
 
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light" style="color:black; font-size: 72px;">HTML Challenge</h1>
         <p class="" style="color:black; font-size: 24px;">
-Instructions: Good luck clicking the button!
+          <br>
+Instructions: There are many buttons inside this webpage. Only one will take you into the next step of the challenge. Good luck finding it!!
        </p>
 
       </div>
     </div>
   </section>
 
-  <div class="album py-5" style="height: 1000px; background-color: #5AB9EA">
-    <!-- <div class="container"> -->
-      <form enctype="multipart/form-data" method="post" action="https://us-central1-al1x-cat-development-20023.cloudfunctions.net/code_wars_crazy_button">
-
-        <button class="buttonClass"><a href="htmlChallenge4Vva52GDmtR.html">click me!</a></button>
-    </form>
-            <!-- <button  type="button"><h3><a href="htmlChallenge4.html">Click Me!</a></h3></button> -->
-            <
-    <!-- </div> -->
+  <div class="album py-2"  style="background-color: #5AB9EA ">
+    <!-- <div class="containerCounter" style="background-color: red; width:200px"> -->
+    <div class="containerCounter">
+      <h1 id="counterTitle">Counter</h1>
+      <div id="number">0</div>
+      <button id="increment">+</button>
+      <button id="decrement">-</button>
+      <br />
+      <button id="sumbit">Sumbit</button>
+        
+    </div>
   </div>
 
 </main>
@@ -114,7 +144,7 @@ Instructions: Good luck clicking the button!
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>August Code War</title>
+    <title>September Code War</title>
 
     <!-- <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/"> -->
 
@@ -130,12 +160,23 @@ Instructions: Good luck clicking the button!
 </head>
 
 <!-- <body style="background-color: #b8c0c2"> -->
+  
+  <script>
+    let add = document.getElementById('increment');
+    let subtract = document.getElementById('decrement');
+   
+    let int = document.getElementById('number');
+    let integer = 0;
 
-    <script>
-        $('.buttonClass').on('mouseover',function() {
-        $(this).css({
-            top: (Math.random()*100)+'%',
-            left: (Math.random()*100)+'%' 
-        });
-        });
-    </script>
+    add.addEventListener('click', function(){
+      integer += 1;
+      int.innerHTML = integer;
+    })
+
+    subtract.addEventListener('click', function(){
+      integer -= 1;
+      int.innerHTML = integer;
+    })
+
+  </script>
+
