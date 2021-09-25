@@ -29,6 +29,41 @@
           font-size: 3.5rem;
         }
       }
+      .containerCounter {
+        background-color: #88B169; 
+        width:500px;
+        height:300px;
+        border: 10px solid #926981;
+        margin: 50px auto
+      }
+      h1{
+        text-align: center;
+        color: white;
+      }
+      #number {
+        height: 25px;
+        width: 250px;
+        margin: 50px auto;
+        border: 1px solid black;
+        text-align: center;
+        background-color: white;
+      }
+      #increment {
+        height:25px;
+        width: 100px;
+        margin-top: 15px;
+        margin-left: 115px;
+      }
+      #decrement {
+        height:25px;
+        width: 100px;
+        margin-top: 15px;
+        margin-left: 50px;
+      }
+     
+
+       
+
     </style>
 
     
@@ -46,7 +81,7 @@
   </div>
 </header>
 
-<main  style="background-color: #5AB9EA; height:1000px">
+<main  style="background-color: #5AB9EA ">
 
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
@@ -54,25 +89,29 @@
         <h1 class="fw-light" style="color:black; font-size: 72px;">HTML Challenge</h1>
         <p class="" style="color:black; font-size: 24px;">
           <br>
-Instructions: There are many buttons inside this webpage. Only one will take you into the next step of the challenge. Good luck finding it!!
+Instructions: There is a hidden number inside this web portal. Your task is to find the number and insert it in the counter using the + and - buttons. once you entered the number, click submit to advance to next step of the challenge
        </p>
 
       </div>
     </div>
   </section>
 
-  <div class="album py-2"  style="background-color: black; height:1000px; ">
-    <div class="container">
-      <image src="../Pictures/ImageHTML.png"></image>
-      <image src="../Pictures/Cipher-Page-7-removebg-preview.png"></image>
-      <!-- <image src="../Pictures/hiddenImage.jpg"></image> -->
+  <div class="album py-2"  style="background-color: #5AB9EA ">
+    <!-- <div class="containerCounter" style="background-color: red; width:200px"> -->
+    <div class="containerCounter">
+      <h1 id="counterTitle">Counter</h1>
+      <div id="number">0</div>
+      <button id="increment">+</button>
+      <button id="decrement">-</button>
+      <br />
+      <button id="sumbit" style="margin-left: 190px; margin-top: 20px; width:100px" href=#>Submit</button>
         
     </div>
   </div>
 
 </main>
 
-<footer class="text-muted py-5" style="margin-top: 300px;">
+<footer class="text-muted py-5">
   <div class="container">
     <p class="float-end mb-1">
       <a href="#">Back to top</a>
@@ -115,3 +154,23 @@ Instructions: There are many buttons inside this webpage. Only one will take you
 </head>
 
 <!-- <body style="background-color: #b8c0c2"> -->
+  
+  <script>
+    let add = document.getElementById('increment');
+    let subtract = document.getElementById('decrement');
+   
+    let int = document.getElementById('number');
+    let integer = 0;
+
+    add.addEventListener('click', function(){
+      integer += 1;
+      int.innerHTML = integer;
+    })
+
+    subtract.addEventListener('click', function(){
+      integer -= 1;
+      int.innerHTML = integer;
+    })
+
+  </script>
+
