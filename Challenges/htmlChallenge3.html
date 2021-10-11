@@ -64,36 +64,34 @@ Instructions: Hit a sequence of button to disable the button to go to the next p
   <div class="album py-2"  style="background-color: #5AB9EA ">
     <div class="container">
       <!-- <button class = "buttonCard" style="margin: 20px;"><h3><a href="htmlChallenge.html">Click Me!</a></h3></button> -->
-           
-            <button class = "buttonCard" style="margin: 20px; background-color: white;"><h3>White</h3></button>
-            <button class = "buttonCard" style="margin: 20px; background-color: silver;"><h3>Silver</h3></button>
-            <button class = "buttonCard" style="margin: 20px; background-color: gray;"><h3>Gray</h3></button>
-            <button class = "buttonCard" style="margin: 20px; background-color: red;"><h3>Red</h3></button>
-            <button class = "buttonCard" style="margin: 20px; background-color: orange;"><h3>Orange</h3></button>
-            <button class = "buttonCard" style="margin: 20px; background-color: maroon;"><h3>Maroon</h3></button>
-            <button class = "buttonCard" style="margin: 20px; background-color: yellow;"><h3>Yellow</h3></button>
-            <button class = "buttonCard" style="margin: 20px; background-color: lime;"><h3>Lime</h3></button>
-            <button class = "buttonCard" style="margin: 20px; background-color: green;"><h3>Green</h3></button>
-            <button class = "buttonCard" style="margin: 20px; background-color: aqua;"><h3>Aqua</h3></button>
-            <button class = "buttonCard" style="margin: 20px; background-color: blue;"><h3>Blue</h3></button>
-            <button class = "buttonCard" style="margin: 20px; background-color: indigo;"><h3>Indigo</h3></button>
-            <button class = "buttonCard" style="margin: 20px; background-color: violet;"><h3>Violet</h3></button>
-            <button class = "buttonCard" style="margin: 20px; background-color: black;"><h3>Black</h3></button>
-            <!-- <button class = "buttonCard" style="margin: 20px; background-color: blue;"><h3><a href="htmlChallenge.html">Click Me!</a></h3></button>
-            <button class = "buttonCard" style="margin: 20px; background-color: green;"><h3><a href="htmlChallenge.html">Click Me!</a></h3></button>
-            <button class = "buttonCard" style="margin: 20px; background-color: yellow;"><h3><a href="htmlChallenge.html">Click Me!</a></h3></button>
-            <button class = "buttonCard" style="margin: 20px; background-color: orange;"><h3><a href="htmlChallenge.html">Click Me!</a></h3></button>
-            <button class = "buttonCard" style="margin: 20px; background-color: indigo;"><h3><a href="htmlChallenge.html">Click Me!</a></h3></button>
-            <button class = "buttonCard" style="margin: 20px; background-color: violet;"><h3><a href="htmlChallenge.html">Click Me!</a></h3></button>
-            <button class = "buttonCard" style="margin: 20px; background-color: yellow;"><h3><a href="htmlChallenge.html">Click Me!</a></h3></button> -->
-         
+           <div>
+              <button class = "buttonCard" style="margin: 20px; background-color: white; width: 250px" id="white"><h3>White</h3></button>
+              <button class = "buttonCard" style="margin: 20px; background-color: silver; width: 250px"id="silver"><h3>Silver</h3></button>
+              <button class = "buttonCard" style="margin: 20px; background-color: gray; width: 250px" id="gray"><h3>Gray</h3></button>
+              <button class = "buttonCard" style="margin: 20px; background-color: red; width: 250px" id="red"><h3>Red</h3></button>
+           </div>
+           <div>
+              <button class = "buttonCard" style="margin: 20px; background-color: orange; width: 250px" id="orange"><h3>Orange</h3></button>
+              <button class = "buttonCard" style="margin: 20px; background-color: maroon; width: 250px; color: white;" id="maroon"><h3>Maroon</h3></button>
+              <button class = "buttonCard" style="margin: 20px; background-color: yellow; width: 250px" id="yellow"><h3>Yellow</h3></button>
+              <button class = "buttonCard" style="margin: 20px; background-color: lime; width: 250px" id="lime"><h3>Lime</h3></button>
+           </div>
+           <div>
+              <button class = "buttonCard" style="margin: 20px; background-color: green; width: 250px" id="green"><h3>Green</h3></button>
+              <button class = "buttonCard" style="margin: 20px; background-color: aqua; width: 250px" id="aqua"><h3>Aqua</h3></button>
+              <button class = "buttonCard" style="margin: 20px; background-color: blue; width: 250px; color: white;" id="blue"><h3>Blue</h3></button>
+              <button class = "buttonCard" style="margin: 20px; background-color: indigo; width: 250px; color: white;" id="indigo"><h3>Indigo</h3></button>
+           </div>
+           <div>
+              <button class = "buttonCard" style="margin: 20px; background-color: violet; width: 250px" id="violet"><h3>Violet</h3></button>
+              <button class = "buttonCard" style="margin: 20px; background-color: black; width: 250px; color: white;" id="black"><h3>Black</h3></button>
+           </div>
 
-            
-        
     </div>
-    <div>
-      <button class = "buttonCard" style="margin: 20px; background-color: white;"><h3>Reset</h3></button>
-      <button class = "buttonCard" style="margin: 20px; background-color: white;"><h3>Submit</h3></button>
+    <div >
+    <!-- <div style="align-items: center;"> -->
+      <button class = "buttonCard" style="margin: 20px; background-color: white; width: 200px;" id="reset"><h3>Reset</h3></button>
+      <button class = "buttonCard" style="margin: 20px; background-color: white; width: 200px;" onclick="validate()"><h3>Submit</h3></button>
     </div>
   </div>
 
@@ -142,3 +140,108 @@ Instructions: Hit a sequence of button to disable the button to go to the next p
 </head>
 
 <!-- <body style="background-color: #b8c0c2"> -->
+
+  <script>
+    let red = document.getElementById('red');
+    let orange = document.getElementById('orange');
+    let yellow = document.getElementById('yellow')
+    let green = document.getElementById('green')
+    let blue = document.getElementById('blue')
+    let indigo = document.getElementById('indigo')
+    let violet = document.getElementById('violet')
+    
+    
+    let white = document.getElementById('white') 
+    let silver = document.getElementById('silver') 
+    let grey = document.getElementById('grey') 
+    let maroon = document.getElementById('maroon') 
+    let lime = document.getElementById('lime') 
+    let aqua = document.getElementById('aqua') 
+    let black = document.getElementById('black')
+
+    let reset = document.getElementById('reset') 
+   
+    // let int = document.getElementById('number');
+    let integer = 0;
+
+    red.addEventListener('click', function(){
+      integer += 10;
+      int.innerHTML = integer;
+    })
+    orange.addEventListener('click', function(){
+      integer += 20;
+      int.innerHTML = integer;
+    })
+    yellow.addEventListener('click', function(){
+      integer += 30;
+      int.innerHTML = integer;
+    })
+    green.addEventListener('click', function(){
+      integer += 40;
+      int.innerHTML = integer;
+    })
+    blue.addEventListener('click', function(){
+      integer += 50;
+      int.innerHTML = integer;
+    })
+    indigo.addEventListener('click', function(){
+      integer += 60;
+      int.innerHTML = integer;
+    })
+    violet.addEventListener('click', function(){
+      integer += 70;
+      int.innerHTML = integer;
+    })
+    
+    // 
+    white.addEventListener('click', function(){
+      integer += 100;
+      int.innerHTML = integer;
+    })
+    silver.addEventListener('click', function(){
+      integer += 100;
+      int.innerHTML = integer;
+    })
+    grey.addEventListener('click', function(){
+      integer += 100;
+      int.innerHTML = integer;
+    })
+    maroon.addEventListener('click', function(){
+      integer += 100;
+      int.innerHTML = integer;
+    })
+    lime.addEventListener('click', function(){
+      integer += 100;
+      int.innerHTML = integer;
+    })
+    aqua.addEventListener('click', function(){
+      integer += 100;
+      int.innerHTML = integer;
+    })
+    black.addEventListener('click', function(){
+      integer += 100;
+      int.innerHTML = integer;
+    })
+
+
+    reset.addEventListener('click', function(){
+      integer == 0
+      int.innerHTML = integer;
+    })
+
+    function validate() {
+      // var digits = document.frm.digits1.value;
+      if(integer == 280)
+      {
+        location.href = 'file:///C:/Users/a797230/Documents/repos/CodeWarsSeptember/Challenges/htmlChallenge4.html';
+
+      }
+      else
+      {
+        alert('The flag is incorrect');
+      }
+
+      return false;
+    }
+
+  </script>

@@ -104,7 +104,7 @@ Instructions: There is a hidden number inside this web portal. Your task is to f
       <button id="increment">+</button>
       <button id="decrement">-</button>
       <br />
-      <button id="sumbit" style="margin-left: 190px; margin-top: 20px; width:100px" href=#>Submit</button>
+      <button id="submit" style="margin-left: 190px; margin-top: 20px; width:100px" onclick="validate()">Submit</button>
         
     </div>
   </div>
@@ -158,6 +158,7 @@ Instructions: There is a hidden number inside this web portal. Your task is to f
   <script>
     let add = document.getElementById('increment');
     let subtract = document.getElementById('decrement');
+    let submit = document.getElementById('submit')
    
     let int = document.getElementById('number');
     let integer = 0;
@@ -171,6 +172,21 @@ Instructions: There is a hidden number inside this web portal. Your task is to f
       integer -= 1;
       int.innerHTML = integer;
     })
+
+    function validate() {
+      // var digits = document.frm.digits1.value;
+      if(integer == 11)
+      {
+        location.href = 'file:///C:/Users/a797230/Documents/repos/CodeWarsSeptember/Challenges/htmlChallenge.html';
+
+      }
+      else
+      {
+        alert('The flag is incorrect');
+      }
+
+      return false;
+    }
 
   </script>
 
